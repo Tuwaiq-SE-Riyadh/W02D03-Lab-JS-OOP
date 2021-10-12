@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+    .person_item{
+    display: inline-block;
+    margin: 15px;
+    }
+    
+    .person_item:hover{
+    background: #eee;
+    border: 1px solid gray;
+    border-radius: 4px;
+    }
+    
+    .person_item span{
+    display: inline-block;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    }
+    
+    .person_list img{
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    border: 4px dashed gray;
+    border-radius: 50%;
+    cursor: pointer;
+    }
+    
+    .selected_person{
+    padding: 25px;
+    margin: 25px;
+    border: 1px dashed blue;
+    border-radius: 4px;
+    }
+    </style>
+  </head>
+  <body>
+  <h2>Our Social Network</h2>
+  <script type="text/javascript" src="persons.js"></script>
+  <h4>Connect to people</h4>
+  
+  <div class="person_list">
+  <script>
+  	print_person_image(person1,"person1");
+  	print_person_image(person2,"person2");
+  	print_person_image(person3,"person3");
+  	
+  	function display(person)
+  	{
+  		person.bio();
+  	}
+  	
+
+  	
+  </script>
+  </div>
+  
+   	
+  </body>
+</html>

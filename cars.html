@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+    .car_item{
+    display: inline-block;
+    }
+    
+    .car_item:hover{
+    background: #eee;
+    border: 1px solid gray;
+    border-radius: 4px;
+    }
+    
+    .car_item span{
+    display: inline-block;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    }
+    
+    .car_list img{
+    width: 250px;
+    height: 200px;
+    margin: 5px;
+    border: 1px dashed blue;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+    
+    .selected_car{
+    padding: 25px;
+    margin: 25px;
+    border: 1px dashed blue;
+    border-radius: 4px;
+    }
+    </style>
+  </head>
+  <body>
+  <h2>Find out the latest cars</h2>
+  <script type="text/javascript" src="cars.js"></script>
+  <h4>This is our car list</h4>
+  
+  <div class="car_list">
+  <script>
+  	print_car_image(car1,"car1");
+  	print_car_image(car2,"car2");
+  	print_car_image(car3,"car3");
+  	
+  	function display(car)
+  	{
+  		document.getElementById("selected_car").innerHTML = car.showMore();
+  	}
+  	
+  	function getCheapestCar()
+  	{
+  		var cheapest_car = car1;
+  		
+  		if(car2.price < cheapest_car.price)
+  			cheapest_car = car2;
+  		if(car3.price < cheapest_car.price)
+  			cheapest_car = car3;
+  			
+  	
+  		alert("Cheapest Car is " + cheapest_car.company + " " + cheapest_car.model + " with price of " + cheapest_car.price);
+  		
+  	}
+  	
+  	getCheapestCar();
+  	
+  </script>
+  </div>
+  
+  <div class="selected_car" id="selected_car">
+  </div>
+  
+   	
+  </body>
+</html>
